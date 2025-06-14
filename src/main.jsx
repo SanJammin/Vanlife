@@ -1,11 +1,16 @@
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import App from "./App.jsx";
+
+function App() {
+  return (
+    <h1>Hello, React Router</h1>
+  );
+}
 
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <Routes>
-      <App />
+      <Route path="/" element={<App />} />
     </Routes>
   </BrowserRouter>,
 );
