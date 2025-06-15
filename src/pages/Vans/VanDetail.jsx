@@ -2,14 +2,14 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 export default function VanDetail() {
-    const params = useParams();
+    const { id } = useParams();
     const [van, setVan] = useState(null);
 
     useEffect(() => {
-        fetch(`/api/vans/${params.id}`)
+        fetch(`/api/vans/${id}`)
             .then(res => res.json())
             .then(data => setVan(data.vans));
-    }, [params.id]);
+    }, [id]);
 
     return (
         <div className="van-detail-container">
