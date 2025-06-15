@@ -10,5 +10,5 @@ export default function Home() {
             </p>
             <Link to="vans">Find your van</Link>
         </div>
-    )
+    );
 }

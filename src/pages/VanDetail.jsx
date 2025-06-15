@@ -24,5 +24,5 @@ export default function VanDetail() {
                 </div>
             ) : <h2>Loading...</h2>}
         </div>
-    )
+    );
 }

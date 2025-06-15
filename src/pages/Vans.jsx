@@ -24,7 +24,7 @@ export default function Vans() {
                 <i className={`van-type ${van.type} selected`}>{van.type}</i>
             </Link>
         </div>
-    ))
+    ));
 
     return (
         <div className="van-list-container">
