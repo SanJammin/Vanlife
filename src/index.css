@@ -223,3 +223,8 @@ header a:hover {
 i[class*="van-type-"] {
     padding: 0.4375em 0.87em;
 }
+
+.van-name {
+    font-weight: 500;
+    font-size: 1.5rem;
+}
