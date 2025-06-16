@@ -178,8 +178,17 @@ footer {
 }
 
 /*** VAN PAGES ***/
-.van-list {
+.van-list-container {
     padding-inline: 1.4375em;
+}
+
+.van-list-filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.van-list-filter-buttons > a {
+    margin-right: 0.9375em;
 }
 
 .van-list {
