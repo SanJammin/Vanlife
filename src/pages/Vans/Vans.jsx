@@ -16,10 +16,11 @@ export default function Vans() {
     const displayVans = typeFilter
         ? vans.filter(van => van.type === typeFilter) : vans;
 
-    const VanElements = displayVans.map(van => (
+    const vanElements = displayVans.map(van => (
         <div key={van.id} className="van-tile">
             <Link 
                 to={van.id} 
+                state={{ search: searchParams.toString() }}
                 aria-label={`View details ${van.name} priced at $${van.price} per day`}
             >
                 <img src={van.imageUrl} alt={`Image of ${van.name}`} />
@@ -76,7 +77,7 @@ export default function Vans() {
                 }
             </div>
             <div className="van-list">
-                {VanElements}
+                {vanElements}
             </div>
         </div>
     );
