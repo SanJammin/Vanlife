@@ -65,8 +65,8 @@ export default function HostVanDetail() {
                     </NavLink>
                 </nav>
 
-                <Outlet />
+                <Outlet context={{ van }}/>
             </div>
         </section>
-    )
+    );
 }
