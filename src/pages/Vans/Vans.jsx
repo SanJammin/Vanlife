@@ -20,7 +20,7 @@ export default function Vans() {
         <div key={van.id} className="van-tile">
             <Link 
                 to={van.id} 
-                state={{ search: searchParams.toString() }}
+                state={{ search: `?${searchParams.toString()}` }}
                 aria-label={`View details ${van.name} priced at $${van.price} per day`}
             >
                 <img src={van.imageUrl} alt={`Image of ${van.name}`} />
