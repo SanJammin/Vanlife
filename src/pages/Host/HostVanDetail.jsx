@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 export default function HostVanDetail() {
     const { id } = useParams();
@@ -17,6 +17,12 @@ export default function HostVanDetail() {
 
     return (
         <section>
+            <Link
+                to=".."
+                relative="path"
+                className="back-button"
+            >&larr <span>Back to all vans</span></Link>
+
             <div className="host-van-detail-layout-container">
                 <div className="host-van-detail">
                     <img src={van.imageUrl} />
