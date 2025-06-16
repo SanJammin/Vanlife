@@ -1,9 +1,15 @@
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, Outlet, NavLink, useParams } from "react-router-dom";
 
 export default function HostVanDetail() {
     const { id } = useParams();
     const [van, setVan] = useState(null);
+
+    const activeLink = {
+        fontWeight: "bold",
+        textDecoration: "underline",
+        color: "#161616"
+    }
 
     useEffect(() => {
         fetch(`/api/host/vans/${id}`)
@@ -21,7 +27,7 @@ export default function HostVanDetail() {
                 to=".."
                 relative="path"
                 className="back-button"
-            >&larr <span>Back to all vans</span></Link>
+            >&larr; <span>Back to all vans</span></Link>
 
             <div className="host-van-detail-layout-container">
                 <div className="host-van-detail">
@@ -36,6 +42,30 @@ export default function HostVanDetail() {
                         <h4>${van.price}/day</h4>
                     </div>
                 </div>
+
+                <nav className="host-van-detail-nav">
+                    <NavLink 
+                    to="."
+                    end
+                    style={({isActive}) => isActive ? activeLink : null}
+                    >
+                        Details
+                    </NavLink>
+                    <NavLink 
+                        to="pricing"
+                        style={({isActive}) => isActive ? activeLink : null}
+                    >
+                        Pricing
+                    </NavLink>
+                    <NavLink 
+                        to="photos"
+                        style={({isActive}) => isActive ? activeLink : null}
+                    >
+                        Photos
+                    </NavLink>
+                </nav>
+
+                <Outlet />
             </div>
         </section>
     )
