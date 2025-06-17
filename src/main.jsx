@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./index.css";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import NotFound from "./pages/NotFound";
 import Vans from "./pages/Vans/Vans";
 import VanDetail from "./pages/Vans/VanDetail";
 import Dashboard from "./pages/Host/Dashboard";
@@ -23,8 +24,8 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route element={<Layout />}>
-          <Route path="/" element={<Home />} />
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="vans" element={<Vans />} />
           <Route path="vans/:id" element={<VanDetail />} />
@@ -40,6 +41,7 @@ function App() {
               <Route path="pricing" element={<HostVanPricing />} />
             </Route>
           </Route>
+          <Route path="*" element={<NotFound />}/>
         </Route>
       </Routes>
     </BrowserRouter>
