@@ -4,11 +4,17 @@ import { useLocation } from "react-router-dom";
 
 export default function Login() {
     const [loginFormData, setLoginFormData] = useState({ email: "", password: ""});
+    const [status, setStatus] = useState("idle");
+    const [error, setError] = useState(null);
     const location = useLocation();
 
     function handleSubmit(e) {
         e.preventDefault();
-        loginUser(loginFormData);
+        setStatus("submitting");
+        loginUser(loginFormData)
+            .then(data => console.log(data))
+            .catch(err => setError(err))
+            .finally(setStatus("idle"))
     }
 
     function handleChange(e) {
@@ -26,6 +32,7 @@ export default function Login() {
                 <h3 className="login-first">{location.state.message}</h3>
             }
             <h1>Sign in to your account</h1>
+            { error && <h2>There was an error: {error.message}</h2>}
             <form onSubmit={handleSubmit} className="login-form">
                 <input
                     name="email"
@@ -41,6 +48,7 @@ export default function Login() {
                     placeholder="Password"
                     value={loginFormData.password}
                 />
+                <button disabled={status === "submitting" ? true : false}>Log in</button>
             </form>
         </div>
     )
