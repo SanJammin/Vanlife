@@ -9,6 +9,11 @@ html, body {
     font-family: "Inter", sans-serif;
 }
 
+a {
+    text-decoration: unset;
+    color: unset;
+}
+
 body::-webkit-scrollbar {
     display: none;
 }
@@ -49,6 +54,10 @@ header a {
 header a:hover {
     color: #161616;
     text-decoration: underline;
+}
+
+nav {
+    display: flex;
 }
 
 main {
@@ -94,6 +103,16 @@ footer {
 
 .link-button:hover {
     transform: translate(1px, 1px);
+}
+
+header .login-icon {
+    height: 18px;
+    width: 18px;
+}
+
+header .login-link {
+    display: inline-flex;
+    align-items: center;
 }
 
 /*** HOME PAGE ***/
@@ -473,4 +492,55 @@ i[class*="van-type-"] {
     width: 100%;
     background-color: #161616;
     color: white;
+}
+
+/*** LOGIN ***/
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-inline: 1.6875em;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+}
+
+.login-form > input {
+    border: 1px solid rgb(209, 213, 219);
+    height: 40px;
+    text-indent: 10px;
+    font-family: inherit;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    font-weight: 400;
+}
+
+.login-form > input:focus {
+    outline: none;
+}
+
+.login-form > input:first-of-type {
+    border-radius: 6px 6px 0px 0px;
+}
+
+.login-form > input:last-of-type {
+    border-radius: 0px 0px 6px 6px;
+    border-top: none;
+}
+
+.login-form > button {
+    background-color: #FF8C38;
+    border: none;
+    border-radius: 6px;
+    height: 55px;
+    margin-top: 1.375em;
+    color: white;
+    font-family: inherit;
+}
+
+.login-first {
+    color: red;
 }
