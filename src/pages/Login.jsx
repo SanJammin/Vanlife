@@ -14,7 +14,7 @@ export default function Login() {
         setStatus("submitting");
         loginUser(loginFormData)
             .then(data => {
-                navigate("/host");
+                navigate("/host", {replace: true});
             })
             .catch(err => setError(err))
             .finally(() => setStatus("idle"));
