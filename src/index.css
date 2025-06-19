@@ -134,7 +134,7 @@ header .login-link {
 }
 
 .home-container p {
-    line-height: 24px;
+    line-height: 1.5rem;
 }
 
 .home-container a {
@@ -169,7 +169,7 @@ header .login-link {
 }
 
 .about-page-content h1 {
-    line-height: 38px;
+    line-height: 2.375em;
 }
 
 .about-page-content p {
@@ -543,4 +543,200 @@ i[class*="van-type-"] {
 
 .login-error {
     color: red;
+}
+
+/*** HOST ***/
+.host-dashboard-earnings {
+    background-color: #FFEAD0;
+    padding: 2.3125em 1.625em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.host-dashboard-earnings > .info > h1 {
+    font-size: 2.25em;
+    color: #161616;
+    margin: 0;
+}
+
+.host-dashboard-earnings > .info > p {
+    color: #4D4D4D;
+}
+
+.host-dashboard-earnings > .info > p > span {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.host-dashboard-earnings > .info > h2 {
+    margin: 0;
+    font-size: 2.375em;
+    color: #161616;
+    font-weight: 900;
+}
+
+.host-dashboard-reviews {
+    background-color: #FFDDB2;
+    padding: 1.5625em 1.625em;
+    display: flex;
+    align-items: center;
+}
+
+.host-dashboard-reviews > h2 {
+    margin: 0;
+}
+
+.host-dashboard-reviews .star {
+    color: #FF8C38;
+    margin-left: 0.9375em;
+    font-size: 1.5625em;
+}
+
+.host-dashboard-reviews p {
+    margin-left: 0.3125em;
+    font-size: 1.25em;
+    color: #4D4D4D;
+    margin-right: auto;
+}
+
+.host-dashboard-reviews p > span {
+    font-weight: bold;
+    color: #161616;
+}
+
+.host-dashboard-vans {
+    padding: 2.3125em 1.625em;
+}
+
+.host-dashboard-vans > .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.host-dashboard-vans .host-vans-list {
+    padding-inline: 0;
+}
+
+.host-income {
+    padding-inline: 1.625em;
+    color: #161616;
+}
+
+.host-income > p {
+    color: #4D4D4D;
+}
+
+.host-income > p span {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.host-income > h2 {
+    font-size: 2.375em;
+    color: #161616;
+    font-weight: 900;
+}
+
+img.graph {
+    width: 100%;
+    max-width: 500px;
+}
+
+.host-income .info-header > p {
+    color: #4D4D4D;
+}
+
+.host-income .info-header > p span {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.host-income .info-header > h3 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-top: 60px;
+}
+
+.host-income .transaction {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    margin-bottom: 1.9375em;
+    padding: 2.1875em 1.8125em;
+    border-radius: 6px;
+}
+.host-income .transaction > h3 {
+    font-size: 2.25rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.host-income .transaction > p {
+    font-weight: 500;
+    font-size: 1.25rem;
+    color: #4D4D4D;
+}
+
+.host-reviews {
+    padding-inline: 1.625em;
+    color: #161616;
+}
+
+.host-reviews .top-text {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+.host-reviews .top-text > h2 {
+    font-weight: 700;
+    font-size: 2rem;
+    margin: 0;
+    margin-right: 1.25em;
+}
+
+.host-reviews .top-text > p {
+    margin: 0;
+    color: #4D4D4D;
+}
+
+.host-reviews .top-text > p span {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.host-reviews > img {
+    margin-bottom: 2.25rem;
+}
+
+.host-reviews .review {
+    margin-block: 1.5625em;
+}
+
+.host-reviews .review .info {
+    display: flex;
+}
+
+.host-reviews .review .name {
+    color: #161616;
+    margin-right: 0.625em;
+    font-weight: 600;
+}
+
+.host-reviews .review .date {
+    color: #8C8C8C;
+}
+
+.host-reviews hr {
+    background-color: #C7C7C7;
+    height: 1px;
+    border: 0;
+}
+
+.host-reviews .review-star {
+    color: #FF8C38;
+    margin-right: 0.3125em;
 }
