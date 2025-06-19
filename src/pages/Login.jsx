@@ -8,13 +8,15 @@ export default function Login() {
     const [error, setError] = useState(null);
     const location = useLocation();
     const navigate = useNavigate();
+    const from = location.state?.from || "/host";
 
     function handleSubmit(e) {
         e.preventDefault();
         setStatus("submitting");
         loginUser(loginFormData)
             .then(data => {
-                navigate("/host", {replace: true});
+                localStorage.setItem("loggedin", true);
+                navigate(from, {replace: true});
             })
             .catch(err => setError(err))
             .finally(() => setStatus("idle"));
@@ -35,7 +37,7 @@ export default function Login() {
                 <h3 className="login-error">{location.state.message}</h3>
             }
             <h1>Sign in to your account</h1>
-            { error ?.message && <h2 className="login-error">There was an error: {error.message}</h2>}
+            { error?.message && <h2 className="login-error">There was an error: {error.message}</h2>}
             <form onSubmit={handleSubmit} className="login-form">
                 <input
                     name="email"
