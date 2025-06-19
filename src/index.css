@@ -541,6 +541,6 @@ i[class*="van-type-"] {
     font-family: inherit;
 }
 
-.login-first {
+.login-error {
     color: red;
 }
