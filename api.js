@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { getFireStore } from "firebase/firestore/lite";
+import { getFireStore, collection } from "firebase/firestore/lite";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDgPPVREapxd_CQRuA4YtGbGgJKIlGDAXw",
@@ -14,6 +14,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const db = getFireStore(app);
+const vansCollectionRef = collection(db, "vans");
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(() => resolve(), ms));
